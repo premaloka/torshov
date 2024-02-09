@@ -317,7 +317,8 @@ a:hover {
 		cursor: pointer;
 	}
 
-	.guide {
+	.guide,
+	#footer {
 		width: 88%;
 	}
 
