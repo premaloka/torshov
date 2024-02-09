@@ -1,3 +1,6 @@
+/* ------------------- */
+/* CSS Reset           */
+/* ------------------- */
 *,
 *::before,
 *::after {
@@ -8,25 +11,31 @@
 
 :root {
 	box-sizing: border-box;
+	min-height: 100%;
+	font-family: -apple-system, Inter, system-ui, BlinkMacSystemFont, "Segoe UI",
+		Roboto, "Helvetica Neue", Arial, sans-serif;
+	position: relative;
+
 	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
 	-moz-text-size-adjust: none;
+	text-size-adjust: none;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	/* -webkit-font-smoothing: antialiased; */
 	-moz-osx-font-smoothing: grayscale;
 
-	position: relative;
-	font-family: -apple-system, Inter, system-ui, BlinkMacSystemFont, "Segoe UI",
-		Roboto, "Helvetica Neue", Arial, sans-serif;
-	min-height: 100%;
 }
 
 html {
-	font-weight: 400;
 	height: 100vh;
+	font-size: 10px;
+	font-weight: 400;
 }
+
+/* ------------------- */
+/* Styling             */
+/* ------------------- */
 
 body {
 	box-sizing: border-box;
@@ -65,7 +74,6 @@ header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	color: white;
 	width: 100%;
 	min-height: 430px;
 	display: flex;
@@ -129,6 +137,8 @@ header {
 .activities--display_attraction {
 	margin: 48px 22px 0;
 	text-align: center;
+	border: none;
+	background-color: transparent;
 	transition: background-color 0.3s ease-in-out,
 		padding 0.5s ease-in-out,
 		margin 0.5s ease-in-out;
@@ -142,8 +152,8 @@ header {
 	cursor: pointer;
 }
 
-[role="button"]:focus,
-[role="button"]:active {
+button:focus,
+button:active {
 	outline: 3px solid #A8DADC;
 	border-radius: 3px;
 }
@@ -156,9 +166,14 @@ header {
 	height: auto;
 }
 
+.activities--display_attraction__description {
+	font-family: 'Poppins', sans-serif;
+	color: #1D3557;
+	line-height: 130%;
+}
+
 .activities--display_attraction h4 {
 	margin: 22px 0 8px;
-	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	font-size: 14px;
 }
@@ -208,6 +223,30 @@ header {
 	width: 180px;
 	object-fit: cover;
 	border-radius: 0px 10px 10px 0px;
+}
+
+#footer {
+	color: #1D3557;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	margin: 2rem 0 1rem;
+	text-align: right;
+	width: 100%;
+	max-width: 404px;
+	/* padding: 0 74px; */
+}
+
+small {
+	font-size: 13px;
+}
+
+a, a:link {
+	color: #457B9D;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1D3557;
 }
 
 /* Extra small devices (phones, 600px and down) */
